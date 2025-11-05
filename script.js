@@ -171,6 +171,33 @@ scrollButton.addEventListener('mouseleave', () => {
     scrollButton.style.background = '#667eea';
 });
 
+// Tab switching functionality for installation section
+function showTab(tabId) {
+    // Hide all tab contents
+    const allTabs = document.querySelectorAll('.tab-content');
+    allTabs.forEach(tab => {
+        tab.classList.remove('active');
+    });
+
+    // Remove active class from all buttons
+    const allButtons = document.querySelectorAll('.tab-btn');
+    allButtons.forEach(btn => {
+        btn.classList.remove('active');
+    });
+
+    // Show selected tab
+    const selectedTab = document.getElementById(tabId);
+    if (selectedTab) {
+        selectedTab.classList.add('active');
+    }
+
+    // Add active class to clicked button
+    const clickedButton = event.target;
+    if (clickedButton) {
+        clickedButton.classList.add('active');
+    }
+}
+
 // Console warning for developers
 console.log('%c⚠️ OSTRZEŻENIE PRAWNE', 'color: red; font-size: 20px; font-weight: bold;');
 console.log('%cNielegalne użycie Spynger może skutkować poważnymi konsekwencjami prawnymi w Polsce.', 'color: orange; font-size: 14px;');
