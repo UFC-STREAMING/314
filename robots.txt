@@ -1,0 +1,11 @@
+# robots.txt pour Spynger Landing Page
+# Autorise tous les robots à crawler le site
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://votredomaine.com/sitemap.xml
+
+# Crawl-delay (optionnel, pour éviter de surcharger le serveur)
+Crawl-delay: 1
